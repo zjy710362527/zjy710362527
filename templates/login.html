@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="/static/css/tx1.css" />
+
+</head>
+<body>
+
+<div class="login-box">
+  <h2>Login</h2>
+  <form class="user" method="post">
+    <div class="login-field">
+      <input type="email" name="email" required="" />
+
+    <label>email</label>
+    </div>
+    <div class="login-field">
+    <input type="password" name="password" required="" />
+    <label >Password</label>
+    </div>
+    <button type="submit">Submit</button>
+    <button onclick="myFunction()">register</button>>
+  </form>
+
+</div>
+
+
+{% if messages %}
+  <script>
+      {% for msg in messages %}
+          alert('{{ msg.message }}');
+      {% endfor %}
+  </script>
+{% endif %}
+
+<script>
+  function myFunction() {
+
+        window.location.href='MyApp/register';
+
+    }
+</script>
+
+</body>
+</html>
